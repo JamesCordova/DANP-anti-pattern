@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -22,7 +23,7 @@ fun KeysImprovedScreen() {
     var users by remember {
         mutableStateOf(List(1000) { User(it, "User $it") })
     }
-    Column {
+    Column (modifier = Modifier.padding(16.dp).safeDrawingPadding()) {
         Button(onClick = {
             users = users + User(users.size, "Nuevo Usuario")
         }) {
