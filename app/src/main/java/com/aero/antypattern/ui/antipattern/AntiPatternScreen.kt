@@ -23,7 +23,6 @@ fun AntiPatternScreen() {
     var users by remember {
         mutableStateOf(List(1000) { User(it, "User $it") })
     }
-    // safe padding drawing
     Column (modifier = Modifier.padding(16.dp).safeDrawingPadding()) {
         Button(onClick = {
             users = users + User(users.size, "Nuevo Usuario")
