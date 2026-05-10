@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.aero.antypattern.ui.antipattern.AntiPatternScreen
 import com.aero.antypattern.ui.antipattern.KeysImprovedScreen
+import com.aero.antypattern.ui.antipattern.SnapshotStateListScreen
 import com.aero.antypattern.ui.antipattern.StatePerItemScreen
 import com.aero.antypattern.ui.theme.AntyPatternTheme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AntyPatternTheme {
-                StatePerItemScreen()
+                SnapshotStateListScreen()
             }
         }
     }
